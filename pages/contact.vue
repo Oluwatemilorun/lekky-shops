@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import PageTitle from "@/components/pageTitle";
+import PageTitle from '@/components/pageTitle';
 
 export default {
-  name: "Contact",
+  name: 'contact',
   components: {
     PageTitle
   }

@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import footerNav from "@/components/footer.vue";
-import topNav from "@/components/header.vue";
+import footerNav from '@/components/footer.vue';
+import topNav from '@/components/header.vue';
 
 export default {
-  name: "App",
+  name: 'app',
   components: {
     footerNav,
     topNav

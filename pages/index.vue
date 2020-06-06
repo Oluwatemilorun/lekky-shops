@@ -17,7 +17,9 @@
         align-end
       >
         <v-container class="white--text px-10" style="margin-top: 100px">
-          <h2 class="display-2"><strong>Do More For Less</strong></h2>
+          <h2 class="display-2">
+            <strong>Do More For Less</strong>
+          </h2>
           <span class="headline">
             <strong>Discover professionals near you</strong>
           </span>
@@ -45,11 +47,11 @@
       </h3>
       <v-row dense justify-center>
         <v-col
+          v-for="item in categoryList"
+          :key="item.text"
           cols="6"
           sm="4"
           md="4"
-          v-for="item in categoryList"
-          :key="item.text"
         >
           <v-card class="my-4" to="/category">
             <v-img
@@ -76,10 +78,10 @@
         <v-container>
           <v-row>
             <v-col
-              cols="12"
-              sm="4"
               v-for="n in howItWorks"
               :key="n"
+              cols="12"
+              sm="4"
               class="my-5"
             >
               <v-icon color="primary" x-large>
@@ -94,7 +96,9 @@
             </v-col>
           </v-row>
           <div class="pa-3">
-            <v-btn large dark color="error" class="my-10"> Get Started </v-btn>
+            <v-btn large dark color="error" class="my-10">
+              Get Started
+            </v-btn>
           </div>
         </v-container>
       </v-sheet>
@@ -108,7 +112,7 @@
         </h3>
         <v-container>
           <v-row>
-            <v-col cols="12" sm="4" v-for="n in whyUse" :key="n" class="my-5">
+            <v-col v-for="n in whyUse" :key="n" cols="12" sm="4" class="my-5">
               <v-icon color="primary" x-large>
                 {{ n.icon }}
               </v-icon>
@@ -149,7 +153,7 @@
                     :src="client.pic"
                     height="360"
                     style="margin-top: -12px"
-                  ></v-img>
+                  />
                 </v-col>
                 <v-col cols="6" sm="7" lg="8" class="pa-sm-10">
                   <figure>
@@ -176,14 +180,18 @@
         <v-container>
           <v-row class="mt-10">
             <v-col cols="6">
-              <h3 class="display-2"><strong>Hire or Get Hired!</strong></h3>
+              <h3 class="display-2">
+                <strong>Hire or Get Hired!</strong>
+              </h3>
               <p class="headline">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
                 blanditiis dolorem culpa
               </p>
             </v-col>
             <v-col cols="6" class="mt-10 text-right">
-              <v-btn outlined x-large class="mr-5">Get Started</v-btn>
+              <v-btn outlined x-large class="mr-5">
+                Get Started
+              </v-btn>
             </v-col>
           </v-row>
         </v-container>
@@ -194,79 +202,79 @@
 </template>
 
 <script>
-import search from "@/components/search.vue";
+import search from '@/components/search.vue';
 
-import image1 from "@/assets/img/work-1.jpg";
-import image2 from "@/assets/img/work-2.jpg";
-import image3 from "@/assets/img/work-3.jpg";
+import image1 from '@/assets/img/work-1.jpg';
+import image2 from '@/assets/img/work-2.jpg';
+import image3 from '@/assets/img/work-3.jpg';
 
-import slide1 from "@/assets/img/slide-1.jpg";
-import slide2 from "@/assets/img/bg-intro.png";
+import slide1 from '@/assets/img/slide-1.jpg';
+import slide2 from '@/assets/img/bg-intro.png';
 
 export default {
-  name: "Home",
+  name: 'home',
   components: {
     search
   },
   data: () => ({
-    image1: image1,
+    image1,
     slides: [{ src: slide1 }, { src: slide2 }],
     categoryList: [
-      { text: "Health", src: image1 },
-      { text: "Business", src: image2 },
-      { text: "Web Services", src: image3 },
-      { text: "Child Care", src: image1 },
-      { text: "Hair & Beauty", src: image3 },
-      { text: "Adult Services", src: image2 },
-      { text: "Cleaning", src: image3 },
-      { text: "Business", src: image2 },
-      { text: "Beauty & Spa", src: image1 }
+      { text: 'Health', src: image1 },
+      { text: 'Business', src: image2 },
+      { text: 'Web Services', src: image3 },
+      { text: 'Child Care', src: image1 },
+      { text: 'Hair & Beauty', src: image3 },
+      { text: 'Adult Services', src: image2 },
+      { text: 'Cleaning', src: image3 },
+      { text: 'Business', src: image2 },
+      { text: 'Beauty & Spa', src: image1 }
     ],
     howItWorks: [
       {
-        title: "Describe Your Task",
-        icon: "mdi-account-book",
+        title: 'Describe Your Task',
+        icon: 'mdi-account-book',
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa"
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa'
       },
       {
-        title: "Describe Your Task",
-        icon: "mdi-account-book",
+        title: 'Describe Your Task',
+        icon: 'mdi-account-book',
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa"
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa'
       },
       {
-        title: "Describe Your Task",
-        icon: "mdi-account-book",
+        title: 'Describe Your Task',
+        icon: 'mdi-account-book',
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa"
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa'
       }
     ],
     whyUse: [
-      { title: "Saves Time", icon: "mdi-account-book" },
-      { title: "Safety First", icon: "mdi-account-book" },
-      { title: "Only The Best Quality", icon: "mdi-account-book" },
-      { title: "Easy to Get Help", icon: "mdi-account-book" },
-      { title: "Seamless Communication", icon: "mdi-forum" },
-      { title: "Cash-free Payment", icon: "mdi-account-book" }
+      { title: 'Saves Time', icon: 'mdi-account-book' },
+      { title: 'Safety First', icon: 'mdi-account-book' },
+      { title: 'Only The Best Quality', icon: 'mdi-account-book' },
+      { title: 'Easy to Get Help', icon: 'mdi-account-book' },
+      { title: 'Seamless Communication', icon: 'mdi-forum' },
+      { title: 'Cash-free Payment', icon: 'mdi-account-book' }
     ],
     clients: [
       {
-        name: "David Michael",
+        name: 'David Michael',
         pic: image1,
         quote: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                 repellat aperiam quasi sunt.`
       },
       {
-        name: "Janet Jackson",
+        name: 'Janet Jackson',
         pic: image2,
         quote: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                 repellat aperiam quasi sunt officia expedita.`
       },
       {
-        name: "Jane Doe",
+        name: 'Jane Doe',
         pic: image3,
         quote: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Est blanditiis dolorem culpa incidunt minus dignissimos deserunt

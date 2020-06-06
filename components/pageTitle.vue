@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "pageTitle",
+  name: 'page-title',
   props: {
     title: String
   }
