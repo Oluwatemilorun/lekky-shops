@@ -451,7 +451,7 @@
                       <v-select
                         v-model="companyPackage"
                         :items="[
-                          'cartts trial',
+                          'lekkyshops trial',
                           'service starter',
                           'service professional',
                           'annual unlimited'

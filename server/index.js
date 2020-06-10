@@ -25,10 +25,16 @@ mongoose.Promise = global.Promise;
     if (process.env.NODE_ENV === 'production')
       await mongoose.connect(config.MONGODB_URI, {
         useNewUrlParser: true
+        // useCreateIndex: true,
+        // useUnifiedTopology: true,
+        // useFindAndModify: true
       });
     else
-      await mongoose.connect('mongodb://localhost:27017/cartts', {
+      await mongoose.connect('mongodb://localhost:27017/lekkyshops', {
         useNewUrlParser: true
+        // useCreateIndex: true,
+        // useUnifiedTopology: true,
+        // useFindAndModify: true
       });
 
     console.log('connected to db successfully');

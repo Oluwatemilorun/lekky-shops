@@ -245,7 +245,7 @@ export default {
       .join(' ');
     return {
       title: `${name} Categories`,
-      description: 'Browse categories on cartts.'
+      description: 'Browse categories on LekkyShops.'
     };
   }
 };

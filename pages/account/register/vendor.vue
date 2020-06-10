@@ -4,7 +4,7 @@
       <div class="mt-4">
         <img
           src="~/assets/img/logo.jpg"
-          alt="CARTTS"
+          alt="LekkyShops"
           height="36px"
           class="mb-2 d-block mx-auto"
         />
@@ -220,7 +220,7 @@
                         id="vendor-company-username"
                         v-model="companyUsername"
                         name="username"
-                        label="Cartts Username"
+                        label="LekkyShops Username"
                         prepend-icon="mdi-web"
                         :error="authFailed"
                         :rules="[
@@ -229,7 +229,7 @@
                             usernameValidation(v) ||
                             'Username can only contain alphanumeric characters. (a-z A-Z 0-9)'
                         ]"
-                        suffix=".cartts.com"
+                        suffix=".lekkyshops.com"
                         hint="Customers will access and view your page using the username"
                       />
                     </v-flex>
@@ -270,7 +270,7 @@
                       <v-select
                         v-model="companyPackage"
                         :items="[
-                          'cartts trial',
+                          'lekkyshops trial',
                           'service starter',
                           'service professional',
                           'annual unlimited'

@@ -9,7 +9,7 @@
                 <v-col cols="12" md="10">
                   <img
                     src="~/assets/img/logo.jpg"
-                    alt="CARTTS"
+                    alt="LekkyShops"
                     height="36px"
                     class="mb-4 d-block mx-auto"
                   />

@@ -119,7 +119,7 @@
           </v-layout>
           <v-card-actions class="justify-center py-5">
             <div class="caption font-weight-light text-capitalize">
-              &copy;2019 — <strong class="pr-2">Cartts</strong> All rights
+              &copy;2019 — <strong class="pr-2">LekkyShops</strong> All rights
               reserved.
             </div>
           </v-card-actions>

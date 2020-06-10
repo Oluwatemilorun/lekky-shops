@@ -218,7 +218,7 @@
         <v-row class="my-12" justify="center">
           <v-col cols="12">
             <h3 class="display-1 text-center tertiary--text font-weight-medium">
-              Why Use Cartts
+              Why Use LekkyShops
             </h3>
           </v-col>
           <v-col cols="10">
@@ -433,7 +433,7 @@
 						<v-flex xs12 md6>
 							<v-layout fill-height justify-center column pa-5>
 								<h3 class="display-2 font-weight-bold primary--text mt-5 text-capitalize">
-									Cartts app
+									Lekkyshops app
 									<br />now available on
 								</h3>
 								<p

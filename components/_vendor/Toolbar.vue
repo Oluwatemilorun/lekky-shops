@@ -12,7 +12,7 @@
       <a href="/" class="d-block">
         <img
           src="~/assets/img/logo.jpg"
-          alt="Cartts"
+          alt="LekkyShops"
           width="90px"
           class="text-uppercase primary--text"
         />

@@ -8,7 +8,7 @@
               <img
                 src="@/assets/img/logo.jpg"
                 style="width: 120px"
-                alt="Cartts"
+                alt="LekkyShops"
                 class="font-weight-light headline text-xs-center teal--text text--darken-1 d-block mx-auto"
               />
             </v-col>
