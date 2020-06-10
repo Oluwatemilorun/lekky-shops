@@ -1,6 +1,6 @@
 <template>
   <v-parallax
-    src="../assets/img/bg-intro.png"
+    :src="bgintro"
     height="320"
     jumbotron
     class="text-center align-end"
@@ -12,11 +12,16 @@
 </template>
 
 <script>
+import bgIntro from '~/assets/img/bg-intro.png';
+
 export default {
   name: 'page-title',
   props: {
     title: String
-  }
+  },
+  data: () => ({
+    bgintro: bgIntro
+  })
 };
 </script>
 
