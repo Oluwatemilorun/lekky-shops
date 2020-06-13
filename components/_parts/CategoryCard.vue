@@ -2,8 +2,8 @@
   <v-card
     class="category-card"
     hover
-    :to="`/category/${category.name.replace(' ', '-')}`"
-    height="250px"
+    :to="`/category/${category.name.replace(/(\s&amp;\s)|\s|\,\s/, '-')}`"
+    height="200px"
   >
     <v-img :src="category && category.cover" height="100%">
       <v-layout slot="placeholder" fill-height align-center justify-center ma-0>

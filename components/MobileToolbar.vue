@@ -15,12 +15,13 @@
         />
         <v-toolbar-title v-if="!searchStarted" class="pt-1 mx-0">
           <a href="/" class="d-block">
-            <img
+            <!--<img
               src="/img/logo.jpg"
-              alt="Cartts"
+              alt="LekkyShops"
               width="70px"
               class="text-uppercase primary--text"
-            />
+            /> -->
+            <h1 class="headline font-weight-bold text-uppercase">LekkyShops</h1>
           </a>
         </v-toolbar-title>
         <v-spacer v-if="!searchStarted" />
@@ -39,7 +40,7 @@
               id="main-search"
               ref="main-search"
               hide-details
-              label="Search service, vendor, category..."
+              label="What are you looking for?"
               solo
               flat
               clearable
@@ -221,12 +222,12 @@
             </v-list-item>
           </template>
           <v-list-item
-            v-for="(item, index2) in item.subs"
+            v-for="(item2, index2) in item.subs"
             :key="index2"
-            :to="`/category/${item.name.replace(/ /g, '-')}`"
+            :to="`/category/${item2.name.replace(/(\s&amp;\s)|\s|\,\s/g, '-')}`"
           >
             <v-list-item-content class="text-capitalize">
-              {{ item.name }}
+              {{ item2.name }}
             </v-list-item-content>
           </v-list-item>
         </v-list-group>

@@ -2,7 +2,7 @@
   <v-footer app absolute height="auto" dark class="pa-0">
     <v-layout row wrap>
       <v-flex v-if="!isSignedIn" xs12>
-        <v-card flat color="primary accent-1">
+        <v-card flat color="tertiary accent-1">
           <v-container>
             <v-row justify="center" class="ma-0">
               <v-col cols="12" md="11">
@@ -79,6 +79,17 @@
                     mdi-linkedin
                   </v-icon>
                 </v-btn>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-youtube
+                  </v-icon>
+                </v-btn>
               </v-layout>
             </v-flex>
             <v-flex xs12>
@@ -91,36 +102,31 @@
                 pb-3
                 class="primary--text"
               >
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   about us
                 </v-btn>
-                |
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   FAQs
                 </v-btn>
-                |
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   Categories
                 </v-btn>
-                |
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   How it works
                 </v-btn>
-                |
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   Privacy policy
                 </v-btn>
-                |
-                <v-btn text color="white" class="mx-2">
+                <v-btn text color="white" class="mx-1">
                   Contact us
                 </v-btn>
               </v-layout>
             </v-flex>
           </v-layout>
           <v-card-actions class="justify-center py-5">
-            <div class="caption font-weight-light text-capitalize">
-              &copy;2019 — <strong class="pr-2">LekkyShops</strong> All rights
-              reserved.
+            <div class="subtitle-2 font-weight-light text-capitalize">
+              &copy; {{ new Date().getFullYear() }} —
+              <strong class="pr-2">LekkyShops</strong> All rights reserved.
             </div>
           </v-card-actions>
         </v-card>

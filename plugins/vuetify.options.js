@@ -6,9 +6,9 @@ const theme = {
   dark: false,
   themes: {
     light: {
-      primary: colors.teal.lighten1,
-      secondary: colors.teal.darken4,
-      tertiary: colors.grey.darken3,
+      primary: colors.grey.darken3,
+      secondary: colors.grey.lighten2,
+      tertiary: colors.teal.darken1,
       accent: colors.red.accent3
     }
   }

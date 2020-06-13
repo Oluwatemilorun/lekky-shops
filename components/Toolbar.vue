@@ -13,12 +13,13 @@
       <v-row align="center">
         <v-toolbar-title class="pt-2 mr-3">
           <a href="/" class="d-block">
-            <img
+            <!--<img
               src="/img/logo.jpg"
               alt="LekkyShops"
               width="90px"
               class="text-uppercase primary--text"
-            />
+            /> -->
+            <h1 class="headline text-uppercase font-weight-bold">LekkyShops</h1>
           </a>
         </v-toolbar-title>
         <v-spacer />
@@ -37,7 +38,7 @@
               ref="main-search"
               hide-details
               clearable
-              placeholder="Search service, vendor, category..."
+              placeholder="What are you looking for?"
               append-icon="mdi-magnify"
               class="search-box d-block mx-2 px-2"
               v-on="on"
@@ -220,7 +221,7 @@
                     <v-sheet width="200px">
                       <v-list style="width: 100%" dense>
                         <v-list-item
-                          v-for="(item, index) in categories"
+                          v-for="(item, index) in categories.slice(0, 5)"
                           :key="index"
                           :class="{
                             'primary--text':
@@ -252,7 +253,7 @@
             text
             color="black"
             class="mx-2"
-            :to="`/category/${item.name.replace(/ /g, '-')}`"
+            :to="`/category/${item.name.replace(/(\s&amp;\s)|\s|\,\s/g, '-')}`"
           >
             {{ item.name }}
           </v-btn>

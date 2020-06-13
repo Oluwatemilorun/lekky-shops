@@ -2,10 +2,10 @@
   <v-app v-scroll="onScroll">
     <Toolbar v-if="!isMobile" />
     <MToolbar v-else />
-    <v-content>
+    <v-main>
       <nuxt />
       <Snackbar />
-    </v-content>
+    </v-main>
     <Footer />
   </v-app>
 </template>

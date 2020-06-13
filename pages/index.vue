@@ -5,8 +5,10 @@
         <v-carousel
           :show-arrows="false"
           hide-delimiters
-          height="350px"
+          height="300px"
           class="elevation-0"
+          cycle
+          interval="4500"
         >
           <v-carousel-item
             v-for="(item, index) in carouselItems"
@@ -43,8 +45,12 @@
             <v-sheet color="white">
               <v-row class="pa-0 ma-0">
                 <v-col cols="12" class="px-0 mb-9">
-                  <v-row justify="center" align="center" class="ma-0">
-                    <v-col cols="12" md="3">
+                  <v-row
+                    justify="center"
+                    align="center"
+                    class="ma-0 pb-2 elevation-2"
+                  >
+                    <v-col cols="12" sm="6" md="3">
                       <v-select
                         id="filter-catg"
                         v-model="filter_catg"
@@ -57,7 +63,7 @@
                       />
                       <!-- @change="$router.push(`/category/${subCategory.replace(/ /g, '-')}`)" -->
                     </v-col>
-                    <v-col cols="12" md="3">
+                    <v-col cols="12" sm="6" md="3">
                       <v-select
                         id="filter-sub-categories"
                         v-model="filter_subCatg"
@@ -70,7 +76,7 @@
                       />
                       <!-- @change="$router.push(`/category/${subCategory.replace(/ /g, '-')}`)" -->
                     </v-col>
-                    <v-col cols="12" md="3">
+                    <v-col cols="12" sm="6" md="3">
                       <v-autocomplete
                         id="filter-location"
                         v-model="country"
@@ -81,7 +87,7 @@
                         class="mx-1 my-0"
                       />
                     </v-col>
-                    <v-col cols="auto">
+                    <v-col cols="auto" sm="6" md="auto">
                       <v-btn
                         color="primary"
                         depressed
@@ -97,9 +103,9 @@
                   <v-row justify="center">
                     <v-col cols="12">
                       <h3
-                        class="display-1 text-center tertiary--text font-weight-medium"
+                        class="display-1 text-center primary--text font-weight-medium"
                       >
-                        Explore Categories
+                        Explore the Marketplace
                       </h3>
                     </v-col>
                     <v-col cols="10">
@@ -107,9 +113,9 @@
                         <v-col
                           v-for="(category, index) in categories"
                           :key="index"
-                          cols="12"
-                          sm="6"
-                          md="4"
+                          cols="6"
+                          sm="4"
+                          md="3"
                         >
                           <CategoryCard :category="category" />
                         </v-col>
@@ -127,7 +133,7 @@
       <v-container>
         <v-row justify="center" class="my-12">
           <v-col cols="12">
-            <h3 class="display-1 text-center tertiary--text font-weight-medium">
+            <h3 class="display-1 text-center primary--text font-weight-medium">
               How it Works
             </h3>
           </v-col>
@@ -145,7 +151,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="title text-center tertiary--text font-weight-medium"
+                      class="title text-center primary--text font-weight-medium"
                     >
                       Describe Your Task
                     </h5>
@@ -168,7 +174,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="title text-center tertiary--text font-weight-medium"
+                      class="title text-center primary--text font-weight-medium"
                     >
                       Describe Your Task
                     </h5>
@@ -190,7 +196,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="title text-center tertiary--text font-weight-medium"
+                      class="title text-center primary--text font-weight-medium"
                     >
                       Describe Your Task
                     </h5>
@@ -217,7 +223,7 @@
       <v-container>
         <v-row class="my-12" justify="center">
           <v-col cols="12">
-            <h3 class="display-1 text-center tertiary--text font-weight-medium">
+            <h3 class="display-1 text-center primary--text font-weight-medium">
               Why Use LekkyShops
             </h3>
           </v-col>
@@ -235,7 +241,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Saves your time
                     </h5>
@@ -254,7 +260,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Safety first
                     </h5>
@@ -273,7 +279,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Only the best quality
                     </h5>
@@ -292,7 +298,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Easy to get help
                     </h5>
@@ -311,7 +317,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Seamless communication
                     </h5>
@@ -330,7 +336,7 @@
                   </v-col>
                   <v-col cols="12" class="px-10">
                     <h5
-                      class="body-1 text-center tertiary--text font-weight-medium text-capitalize"
+                      class="body-1 text-center primary--text font-weight-medium text-capitalize"
                     >
                       Cash-Free payment
                     </h5>
@@ -346,46 +352,49 @@
       <v-container>
         <v-row class="my-12" justify="center">
           <v-col cols="12">
-            <h3 class="display-1 text-center tertiary--text font-weight-medium">
-              What Our Customers Are Saying
+            <h3 class="display-1 text-center primary--text font-weight-medium">
+              What Our Vendors Are Saying
             </h3>
           </v-col>
           <v-col cols="12" md="10">
             <v-row justify="center">
               <v-col cols="12" sm="10">
                 <v-carousel
-                  :height="$vuetify.breakpoint.smAndDown ? 600 : 300"
-                  hide-delimiters
+                  cycle
+                  hide-delimiter-background
+                  delimeter-icon="mdi-minus"
+                  interval="4000"
+                  height="320"
                 >
-                  <v-carousel-item class="px-lg-9">
-                    <v-card flat color="primary" height="100%">
-                      <v-row no-gutters>
-                        <v-col cols="12" md="5" class="pa-0">
+                  <v-carousel-item
+                    v-for="(vendor, i) in vendors"
+                    :key="i"
+                    transition="scroll-x-transition"
+                    reverse-transition="scroll-x-reverse-transition"
+                  >
+                    <v-sheet height="360" dark color="teal lighten-2" tile>
+                      <v-row>
+                        <v-col cols="6" color="primary" sm="5" lg="4">
                           <v-img
-                            height="300"
-                            width="100%"
-                            class="primary lighten-5"
+                            :src="vendor.img"
+                            height="360"
+                            style="margin-top: -12px"
                           />
                         </v-col>
-                        <v-col cols="12" md="7">
-                          <v-container fill-height>
-                            <v-row align="center">
-                              <v-col cols="12" class="px-12">
-                                <p class="font-italic subtitle-1">
-                                  Nisi amet occaecat enim eu dolor non
-                                  exercitation ullamco magna occaecat.
-                                </p>
-                              </v-col>
-                              <v-col cols="12" class="px-12">
-                                <h5 class="title font-weight-bold">
-                                  David Martin
-                                </h5>
-                              </v-col>
-                            </v-row>
-                          </v-container>
+                        <v-col cols="6" sm="7" lg="8" class="pa-sm-10">
+                          <figure>
+                            <blockquote class="blockquote subtitle-1">
+                              <span class="display-1">&ldquo;</span>
+                              {{ vendor.quote }}
+                              <span class="display-1">&rdquo;</span>
+                            </blockquote>
+                            <fig-caption class=" pl-5 headline">
+                              - {{ vendor.name }}
+                            </fig-caption>
+                          </figure>
                         </v-col>
                       </v-row>
-                    </v-card>
+                    </v-sheet>
                   </v-carousel-item>
                 </v-carousel>
               </v-col>
@@ -462,6 +471,9 @@
 </template>
 
 <script>
+import vendor1 from '~/static/img/categories/barbers.jpg';
+import vendor2 from '~/static/img/categories/event.jpg';
+
 import { loadCountries } from '~/assets/js/main';
 import CategoryCard from '~/components/_parts/CategoryCard.vue';
 
@@ -512,12 +524,28 @@ export default {
           tagline: 'Do More For Less',
           smallTagline: 'Discover professionals near you',
           img: '/img/slides/01.jpg'
+        },
+        {
+          tagline: 'A Big tagline',
+          smallTagline: 'A Small Tagline',
+          img: '/img/slides/03.jpg'
         }
-        // {
-        // 	tagline: "A Big tagline",
-        // 	smallTagline: "A Small Tagline",
-        // 	img: "/img/slides/02.jpg"
-        // }
+      ],
+      vendors: [
+        {
+          name: 'David Michael',
+          img: vendor1,
+          quote: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                  repellat aperiam quasi sunt.`
+        },
+        {
+          name: 'Janet Jackson',
+          img: vendor2,
+          quote: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
+                  repellat aperiam quasi sunt officia expedita.`
+        }
       ],
       appScreenItems: [
         { src: '/img/screens/00.jpg', caption: 'som' },
