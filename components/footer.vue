@@ -1,64 +1,152 @@
 <template>
-  <v-row justify="center" no-gutters>
-    <v-col cols="12" class="text-center py-4">
-      <v-btn
-        v-for="icon in foot_icons"
-        :key="icon"
-        icon
-        class="mx-4 white-text"
-      >
-        <v-icon size="24px">
-          {{ icon }}
-        </v-icon>
-      </v-btn>
-    </v-col>
-    <v-col cols="12" class="text-center py-4">
-      <v-btn
-        v-for="link in foot_links"
-        :key="link"
-        text
-        tile
-        class="mx-4 white--text"
-        :to="link.to"
-      >
-        {{ link.text }}
-      </v-btn>
-    </v-col>
-    <v-col cols="12">
-      <v-row style="background: #222" class="px-4">
-        <v-col cols="6">
-          <span> &copy; {{ new Date().getFullYear() }}</span>
-        </v-col>
-        <v-col cols="6" class="text-right">
-          <span>LekkyShops</span>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <v-footer app absolute height="auto" dark class="pa-0">
+    <v-layout row wrap>
+      <v-flex v-if="!isSignedIn" xs12>
+        <v-card flat color="tertiary accent-1">
+          <v-container>
+            <v-row justify="center" class="ma-0">
+              <v-col cols="12" md="11">
+                <v-row justify="center" align="center" class="my-5 mx-0">
+                  <v-col cols="12" md="8">
+                    <h3 class="display-1 font-weight-bold">
+                      Hire or Get Hired!
+                    </h3>
+                    <p
+                      class="font-weight-medium text-caption"
+                      style="line-height: 20px"
+                    >
+                      Are you an individual looking to get task done or a <br />
+                      Vendor looking to work on a task
+                    </p>
+                  </v-col>
+                  <v-col cols="12" md="auto">
+                    <v-btn outlined x-large color="white">
+                      get started
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card>
+      </v-flex>
+      <v-flex xs12>
+        <v-card class="flex" flat color="grey darken-3" tile>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-layout row wrap justify-center my-5 pt-5>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-facebook
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-twitter
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-instagram
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-linkedin
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  outlined
+                  icon
+                  color="white"
+                  small
+                  class="pa-0 mx-2 social-button"
+                >
+                  <v-icon small>
+                    mdi-youtube
+                  </v-icon>
+                </v-btn>
+              </v-layout>
+            </v-flex>
+            <v-flex xs12>
+              <v-layout
+                row
+                wrap
+                justify-center
+                align-center
+                mb-5
+                pb-3
+                class="primary--text"
+              >
+                <v-btn text color="white" class="mx-1">
+                  about us
+                </v-btn>
+                <v-btn text color="white" class="mx-1">
+                  FAQs
+                </v-btn>
+                <v-btn text color="white" class="mx-1">
+                  Categories
+                </v-btn>
+                <v-btn text color="white" class="mx-1">
+                  How it works
+                </v-btn>
+                <v-btn text color="white" class="mx-1">
+                  Privacy policy
+                </v-btn>
+                <v-btn text color="white" class="mx-1">
+                  Contact us
+                </v-btn>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+          <v-card-actions class="justify-center py-5">
+            <div class="subtitle-2 font-weight-light text-capitalize">
+              &copy; {{ new Date().getFullYear() }} —
+              <strong class="pr-2">LekkyShops</strong> All rights reserved.
+            </div>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-footer>
 </template>
 
 <script>
 export default {
-  name: 'footer',
-
-  data: () => ({
-    foot_links: [
-      { text: 'Home', to: '/' },
-      { text: 'About Us', to: '/about' },
-      { text: 'Categories', to: '/category' },
-      { text: 'FAQs', to: '/' },
-      { text: 'Privacy Policy', to: '/' },
-      { text: 'Contact Us', to: '/contact' }
-    ],
-    foot_icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-instagram',
-      'mdi-linkedin',
-      'mdi-medium'
-    ]
-  })
+  computed: {
+    isSignedIn() {
+      return this.$store.state.user.isSignedIn;
+    }
+  }
 };
 </script>
 
-<style></style>
+<style>
+.v-btn.social-button.v-btn--round {
+  border-radius: 2px !important;
+}
+</style>
