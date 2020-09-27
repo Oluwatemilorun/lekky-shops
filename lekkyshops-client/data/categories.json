@@ -1,0 +1,286 @@
+[
+  {
+    "_id" : "5f55cbc9068ad30ef8779cc1",
+    "tags" : [
+            "men",
+            "women",
+            "kids",
+            "clothing"
+    ],
+    "isActive" : true,
+    "name" : "fashion",
+    "slug" : "fashion",
+    "description" : "clothing and accessories for men, women & kids",
+    "subs" : [
+            {
+                    "tags" : [
+                            "women clothing",
+                            "bra",
+                            "skirts"
+                    ],
+                    "_id" : "5f55de0d068ad30ef8779cce",
+                    "name" : "for women",
+                    "description" : "all women's clothing",
+                    "slug" : "for-women",
+                    "date" : "2020-09-07T07:15:25.447Z"
+            },
+            {
+                    "tags" : [
+                            "men",
+                            "belt",
+                            "trousers"
+                    ],
+                    "_id" : "5f55ff546e83100a2c0874f9",
+                    "name" : "men's clothing",
+                    "description" : "clothing collections for men",
+                    "slug" : "mens-clothing",
+                    "date" : "2020-09-07T09:37:24.075Z"
+            },
+            {
+                    "tags" : [
+                            "kids",
+                            "baby",
+                            "children"
+                    ],
+                    "_id" : "5f560e3a6e83100a2c0874fa",
+                    "name" : "kids & baby",
+                    "description" : "clothing collections for kiddies and babies",
+                    "slug" : "kids-baby",
+                    "date" : "2020-09-07T10:40:58.806Z"
+            },
+            {
+                    "tags" : [
+                            "sneakers",
+                            "trekkers",
+                            "trainers"
+                    ],
+                    "_id" : "5f560e636e83100a2c0874fb",
+                    "name" : "shoes",
+                    "description" : "shoes for all",
+                    "slug" : "shoes",
+                    "date" : "2020-09-07T10:41:39.356Z"
+            },
+            {
+                    "tags" : [
+                            "casio",
+                            "quartz",
+                            "rolex"
+                    ],
+                    "_id" : "5f560e956e83100a2c0874fc",
+                    "name" : "wrist watches",
+                    "description" : "wrist watches for all",
+                    "slug" : "wrist-watches",
+                    "date" : "2020-09-07T10:42:29.320Z"
+            },
+            {
+                    "tags" : [
+                            "bracelets",
+                            "wristband",
+                            "rings"
+                    ],
+                    "_id" : "5f560f216e83100a2c0874fd",
+                    "name" : "other accessories",
+                    "description" : "other fashion accessories",
+                    "slug" : "other-accessories",
+                    "date" : "2020-09-07T10:44:49.875Z"
+            }
+    ],
+    "date" : "2020-09-07T05:57:29.205Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cc4d068ad30ef8779cc2",
+    "tags" : [
+            "android",
+            "",
+            "iphone",
+            "laptop",
+            "ps5"
+    ],
+    "isActive" : true,
+    "name" : "phones & laptops",
+    "slug" : "phones-laptops",
+    "description" : "phones, laptops, gaming and accessories",
+    "subs" : [ ],
+    "date" : "2020-09-07T05:59:41.002Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cce2068ad30ef8779cc3",
+    "tags" : [
+            "tv",
+            "",
+            "audio",
+            "camera",
+            "generator"
+    ],
+    "isActive" : true,
+    "name" : "electronics",
+    "slug" : "electronics",
+    "description" : "consumer electronics",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:02:10.584Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cd48068ad30ef8779cc4",
+    "tags" : [
+            "car",
+            "jeep",
+            "wiper",
+            "tyre",
+            "engine oil"
+    ],
+    "isActive" : true,
+    "name" : "automobile",
+    "slug" : "automobile",
+    "description" : "cars and accessories",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:03:52.215Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cda9068ad30ef8779cc5",
+    "tags" : [
+            "multivitamins",
+            "weight gain loss",
+            "sex toys",
+            "makeup"
+    ],
+    "isActive" : true,
+    "name" : "health & beauty",
+    "slug" : "health-beauty",
+    "description" : "health and beauty products",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:05:29.592Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cf68068ad30ef8779cc6",
+    "tags" : [
+            "canned food",
+            "seeds",
+            "rice",
+            "beans"
+    ],
+    "isActive" : true,
+    "name" : "food & agriculture",
+    "slug" : "food-agriculture",
+    "description" : "food and agricultural products",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:12:56.573Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55cfc4068ad30ef8779cc7",
+    "tags" : [
+            "chairs",
+            "table",
+            "desk",
+            "shelf",
+            "board"
+    ],
+    "isActive" : true,
+    "name" : "furniture",
+    "slug" : "furniture",
+    "description" : "home and office furniture",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:14:28.898Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d022068ad30ef8779cc8",
+    "tags" : [
+            "garden",
+            "utensils",
+            "blender",
+            "grater"
+    ],
+    "isActive" : true,
+    "name" : "home & kitchen",
+    "slug" : "home-kitchen",
+    "description" : "utensils and home appliances",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:16:02.517Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d0af068ad30ef8779cc9",
+    "tags" : [
+            "designs",
+            "programming",
+            "auditing",
+            "virtual assistant"
+    ],
+    "isActive" : true,
+    "name" : "business services",
+    "slug" : "business-services",
+    "description" : "remote and freelance services",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:18:23.073Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d0fe068ad30ef8779cca",
+    "tags" : [
+            "land",
+            "housing",
+            "estate",
+            "apartments"
+    ],
+    "isActive" : true,
+    "name" : "real estate",
+    "slug" : "real-estate",
+    "description" : "housing, land and aparments for sale or lease",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:19:42.505Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d1ea068ad30ef8779ccb",
+    "tags" : [
+            "tractor",
+            "buldozer",
+            "construction",
+            "farming"
+    ],
+    "isActive" : true,
+    "name" : "heavy equipment",
+    "slug" : "heavy-equipment",
+    "description" : "commercial machinery and tools",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:23:38.397Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d22e068ad30ef8779ccc",
+    "tags" : [
+            "animal",
+            "pet",
+            "poultry"
+    ],
+    "isActive" : true,
+    "name" : "animal & pets",
+    "slug" : "animal-pets",
+    "description" : "animals and pets",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:24:46.465Z",
+    "__v" : 0
+  },
+  {
+    "_id" : "5f55d289068ad30ef8779ccd",
+    "tags" : [
+            "treadmill",
+            "dumbell",
+            "ball"
+    ],
+    "isActive" : true,
+    "name" : "sports & fitness",
+    "slug" : "sports-fitness",
+    "description" : "equipments for sports and fitness",
+    "subs" : [ ],
+    "date" : "2020-09-07T06:26:17.350Z",
+    "__v" : 0
+  }
+  
+]

@@ -1,0 +1,134 @@
+[
+  { 
+    "id": "5f55d289068ad30ef8abc",
+    "name": "Apple iphone 14 pro max 2020, 16gb ram, 256 rom",
+    "price": 45000,
+    "category": "phones & laptops",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img10.jpg",
+    "rating": 4.5,
+    "vendor": "Kunle gadgets"
+  },
+  { 
+    "id": "5f55d289068ad30ef8adb",
+    "name": "Multi colored fashion bracelets",
+    "price": 9500,
+    "category": "fashion",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/bracelet.jpg",
+    "rating": 3.8,
+    "vendor": "Accessorize"
+  },
+  { 
+    "id": "5f55d289068ad30ef8aec",
+    "name": "Samsung galaxy m11 6.4-inches (3gb, 32gb rom) android 10",
+    "price": 49990,
+    "category": "phones & laptops",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img6.jpg",
+    "rating": 4.2,
+    "vendor": "Gadease Ltd"
+  },
+  {
+    "id": "5f55d289068ad30efead",
+    "name": "straight middle parting wig for women",
+    "price": 2000,
+    "category": "health & beauty",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "OUT OF STOCK",
+    "imageURL": "/img/hair-dresser.jpeg",
+    "rating": 4.2,
+    "vendor": "Anita hair collections"
+  },
+  { 
+    "id": "5f55d289068ad30efucke",
+    "name": "Hisense 40 inches led full hd smart tv with wifi",
+    "price": 106950,
+    "category": "electronic",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img12.jpg",
+    "rating": 3.95,
+    "vendor": "Emeka and sons limited"
+  },
+  { 
+    "id": "5f55d289068ad30efood5",
+    "name": "havells pop toaster crust 800 w",
+    "price": 6079,
+    "category": "home & kitchen",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/drumset.jpg",
+    "rating": 4.0,
+    "vendor": "mama ibrahim's shop"
+  },
+  { 
+    "id": "5f55d289068ad30ef121p",
+    "name": "Handmade fine multipurpose clay pots",
+    "price": 3120,
+    "category": "fashion",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/pottery.jpg",
+    "rating": 3.1,
+    "vendor": "Kemi's boutique"
+  },
+  { 
+    "id": "5f55d289068ad30egg2aec",
+    "name": "Samsung galaxy a10s 2gb ram, 32gb rom android 9",
+    "price": 42500,
+    "category": "phones & laptops",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img4.jpg",
+    "rating": 4.8,
+    "vendor": "ndubest communications"
+  },
+  { 
+    "id": "5f639209068ad30ef8aec",
+    "name": "brown leathered corporate shoes for men",
+    "price": 6500,
+    "category": "fashion",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/shoes.jpg",
+    "rating": 4.7,
+    "vendor": "rare collections"
+  },
+  { 
+    "id": "5f55d289068ad30ef8aec",
+    "name": "hp elitebook 8460p corei5 4gb ram 320gb rom",
+    "price": 69780,
+    "category": "phones & laptops",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img13.jpg",
+    "rating": 4.45,
+    "vendor": "croxz motors"
+  },
+  { 
+    "id": "5f55d289068fad0ef8aec",
+    "name": "Full Body Massaging Service with Ointments",
+    "price": 23400,
+    "category": "sports & fitness",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/adult-service.jpeg",
+    "rating": 5.0,
+    "vendor": "xclusive beauty spa"
+  },
+  { 
+    "id": "5f55d289234ad30ef8aec",
+    "name": "High waist summer blue skirt",
+    "price": 5000,
+    "category": "fashion",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/blue-skirt.jpg",
+    "rating": 4.2,
+    "vendor": "rare collections"
+  }
+]
