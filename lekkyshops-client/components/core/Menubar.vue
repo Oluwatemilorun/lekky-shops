@@ -12,7 +12,7 @@
         <v-tab
           v-for="(category, y) in categories"
           :key="y"
-          class="text-capitalize subtitle-2 pa-0 primary--text"
+          class="text-capitalize subtitle-2 font-weight-thin pa-0 primary--text"
         >
           <v-menu
             bottom

@@ -33,18 +33,8 @@
       <v-btn icon color="primary" @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title class="px-0 mx-0">
-        <v-btn
-          to="/"
-          text
-          color="#f9f8f3"
-          style="text-transform: none"
-          class="font-weight-bold pl-0"
-        >
-          <span class="primary--text logo" style="font-size: 26px">
-            LekkyShops
-          </span>
-        </v-btn>
+      <v-toolbar-title class="px-0 mx-0 font-weight-black headline">
+        LekkyShops
       </v-toolbar-title>
 
       <v-btn
