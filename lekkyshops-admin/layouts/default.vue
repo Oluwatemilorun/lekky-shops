@@ -20,13 +20,7 @@
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
-          <v-btn
-            block
-            color="accent"
-            class="text-capitalize"
-            depressed
-            @click="signOut"
-          >
+          <v-btn block color="accent" class="text-capitalize" depressed>
             Logout
           </v-btn>
         </v-list-item>
