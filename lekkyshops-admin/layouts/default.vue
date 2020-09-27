@@ -1,17 +1,21 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
+      :mobile-breakpoint="900"
       clipped
-      fixed
-      mobile-breakpoint="960"
-      color="primary"
-      dark
-      hide-overlay
       app
+      dark
+      color="primary"
     >
-      <v-list dark nav>
-        <v-list-item v-for="(item, i) in links" :key="i" :to="item.to" exact>
+      <v-list>
+        <v-list-item
+          v-for="(item, i) in links"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -19,95 +23,38 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
-          <v-btn block color="accent" class="text-capitalize" depressed>
-            Logout
-          </v-btn>
-        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-    <v-app-bar clipped-left app height="64" color="white">
-      <v-btn
-        icon
-        color="primary"
-        class="hidden-md-and-up"
-        @click.stop="drawer = !drawer"
-      >
-        <v-icon large>mdi-sort-variant</v-icon>
-      </v-btn>
-      <v-toolbar-title class="pl-2">
-        <v-img src="/logo.png" />
-      </v-toolbar-title>
-      <v-divider vertical inset class="mx-2" />
-      <span class="primary--text title font-weight-bold"> Admin </span>
-
-      <v-spacer />
-
-      <v-btn icon height="42" width="42" style="cursor: default">
-        <v-avatar
-          size="42"
-          color="primary"
-          class="headline white--text font-weight-bold text-uppercase"
-        >
-          <span>A</span>
-        </v-avatar>
-      </v-btn>
+    <v-app-bar clipped-left app color="white">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title v-text="title" />
     </v-app-bar>
-
-    <!-- content -->
     <v-main>
-      <v-container fluid class="pt-0">
+      <v-container>
         <nuxt />
         <Snackbar />
       </v-container>
     </v-main>
-
     <v-footer app>
       <v-container fluid>
         <span>&copy; {{ new Date().getFullYear() }}</span>
-        <a href="/" style="text-decoration: none" class="pl-2">Kipspace</a>
+        <a href="/" style="text-decoration: none" class="pl-2">{{ title }}</a>
       </v-container>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-import getInitials from '~/utils/getInitials'
-
 export default {
   data() {
     return {
+      title: 'LekkyShops',
       drawer: false,
-      links: [
-        {
-          icon: 'mdi-home',
-          title: 'Dashboard',
-          to: '/',
-        },
-        {
-          icon: 'mdi-tag-multiple',
-          title: 'Categories',
-          to: '/categories',
-        },
-        {
-          icon: 'mdi-office-building',
-          title: 'Facilities',
-          to: '/facilities',
-        },
-        {
-          icon: 'mdi-account-multiple',
-          title: 'Users',
-          to: '/users',
-        },
-      ],
     }
   },
-  computed: {},
-  methods: {
-    getInitials,
-    toggleDrawer() {
-      this.drawer = !this.drawer
+  computed: {
+    links() {
+      return this.$store.state.links
     },
   },
 }
