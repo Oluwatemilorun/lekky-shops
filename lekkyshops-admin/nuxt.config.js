@@ -12,7 +12,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap',
+          'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap',
       },
     ],
   },
