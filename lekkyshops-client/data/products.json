@@ -6,20 +6,9 @@
     "category": "phones & laptops",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/product/img10.jpg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.5,
     "vendor": "Kunle gadgets"
-  },
-  { 
-    "id": "5f55d289068ad30ef8adb",
-    "name": "Multi colored fashion bracelets",
-    "price": 9500,
-    "category": "fashion",
-    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
-    "availability": "IN STOCK",
-    "imageURL": "/img/bracelet.jpg",
-    "rating": 3.8,
-    "vendor": "Accessorize"
   },
   { 
     "id": "5f55d289068ad30ef8aec",
@@ -39,7 +28,7 @@
     "category": "health & beauty",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "OUT OF STOCK",
-    "imageURL": "/img/hair-dresser.jpeg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.2,
     "vendor": "Anita hair collections"
   },
@@ -50,7 +39,7 @@
     "category": "electronic",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/product/img12.jpg",
+    "imageURL": "/img/product/img6.jpg",
     "rating": 3.95,
     "vendor": "Emeka and sons limited"
   },
@@ -61,7 +50,7 @@
     "category": "home & kitchen",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/drumset.jpg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.0,
     "vendor": "mama ibrahim's shop"
   },
@@ -72,7 +61,7 @@
     "category": "fashion",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/pottery.jpg",
+    "imageURL": "/img/product/img6.jpg",
     "rating": 3.1,
     "vendor": "Kemi's boutique"
   },
@@ -83,7 +72,7 @@
     "category": "phones & laptops",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/product/img4.jpg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.8,
     "vendor": "ndubest communications"
   },
@@ -94,7 +83,7 @@
     "category": "fashion",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/shoes.jpg",
+    "imageURL": "/img/product/img6.jpg",
     "rating": 4.7,
     "vendor": "rare collections"
   },
@@ -105,7 +94,7 @@
     "category": "phones & laptops",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/product/img13.jpg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.45,
     "vendor": "croxz motors"
   },
@@ -116,7 +105,7 @@
     "category": "sports & fitness",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/adult-service.jpeg",
+    "imageURL": "/img/product/img6.jpg",
     "rating": 5.0,
     "vendor": "xclusive beauty spa"
   },
@@ -127,8 +116,19 @@
     "category": "fashion",
     "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
     "availability": "IN STOCK",
-    "imageURL": "/img/blue-skirt.jpg",
+    "imageURL": "/img/product/img5.jpg",
     "rating": 4.2,
     "vendor": "rare collections"
+  },
+  { 
+    "id": "5f55d289068ad30ef8adb",
+    "name": "Multi colored fashion bracelets",
+    "price": 9500,
+    "category": "fashion",
+    "short_description": "Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium qui.",
+    "availability": "IN STOCK",
+    "imageURL": "/img/product/img6.jpg",
+    "rating": 3.8,
+    "vendor": "Accessorize"
   }
 ]
