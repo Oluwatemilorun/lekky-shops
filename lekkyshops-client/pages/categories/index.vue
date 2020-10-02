@@ -8,7 +8,7 @@
           class="fill-height white--text overlay"
         >
           <v-col cols="11">
-            <div class="display-1 font-weight-bold text-capitalize">
+            <div class="headline font-weight-bold text-capitalize">
               All Categories
             </div>
             <v-breadcrumbs :items="breadcrumbs" dark class="px-0 py-2">

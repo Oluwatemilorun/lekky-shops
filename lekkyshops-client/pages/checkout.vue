@@ -3,11 +3,13 @@
     <v-container fluid>
       <v-row justify="center">
         <v-col cols="12" lg="11">
-          <v-card tile elevation="2" class="py-5 px-10">
+          <v-card elevation="2" class="my-5 pa-2 py-md-5 px-sm-10">
             <v-row>
               <v-col cols="12" md="6" lg="4">
                 <v-card flat>
-                  <div class="title text-uppercase mb-10">Shopping Cart</div>
+                  <div class="subtitle-1 font-weight-bold text-uppercase mb-10">
+                    Shopping Cart
+                  </div>
                   <v-list>
                     <v-list-item
                       v-for="(prod, i) in cart"
@@ -29,7 +31,7 @@
                         </div>
                       </v-list-item-content>
                       <v-list-item-icon>
-                        <v-btn icon color="accent" small @click="removeItem(i)">
+                        <v-btn icon color="error" small @click="removeItem(i)">
                           <v-icon small>mdi-close</v-icon>
                         </v-btn>
                       </v-list-item-icon>
@@ -47,8 +49,10 @@
                 </v-card>
               </v-col>
               <v-col cols="12" md="6" lg="4">
-                <v-card tile class="pa-5" flat color="primary lighten-1" dark>
-                  <div class="title text-uppercase mb-1">Address Details</div>
+                <v-card class="pa-5">
+                  <div class="subtitle-1 font-weight-bold text-uppercase">
+                    Address Details
+                  </div>
                   <v-form ref="form" v-model="addressForm">
                     <v-row>
                       <v-col cols="12">
@@ -111,8 +115,10 @@
                 </v-card>
               </v-col>
               <v-col cols="12" md="6" lg="4">
-                <v-card tile class="pa-5" flat color="primary lighten-1" dark>
-                  <div class="title text-uppercase mb-">Card Details</div>
+                <v-card class="pa-5">
+                  <div class="subtitle-1 font-weight-bold text-uppercase">
+                    Card Details
+                  </div>
                   <v-card
                     class="px-5 pb-0 pt-2 mt-5"
                     tile
@@ -190,7 +196,7 @@
                         <v-btn
                           x-large
                           block
-                          color="white"
+                          color="primary"
                           light
                           :disabled="!addressForm || !cardForm || !cartTotal"
                         >
@@ -211,10 +217,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { emailValidation } from '~/assets/js/validation'
+import { emailValidation } from '~/utils/validation'
 
 export default {
   data: () => ({
+    searchInput: '',
     name: '',
     email: '',
     phone: '',

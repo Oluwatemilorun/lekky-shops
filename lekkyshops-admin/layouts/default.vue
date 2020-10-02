@@ -2,13 +2,32 @@
   <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
-      :mobile-breakpoint="900"
-      clipped
+      :mobile-breakpoint="960"
       app
       dark
       color="primary"
+      class="py-5"
     >
-      <v-list>
+      <div class="white--text pb-3 text-uppercase headline text-center">
+        <span class="font-weight-black">{{ title }}</span>
+      </div>
+      <v-divider />
+      <div class="text-center py-2">
+        <v-avatar size="75" color="black">
+          <v-icon color="primary" x-large>mdi-account</v-icon>
+        </v-avatar>
+        <v-list-item class="my-0">
+          <v-list-item-content>
+            <v-list-item-title>Jane Doe</v-list-item-title>
+            <v-list-item-subtitle>janedoe@gmail.com</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </div>
+
+      <v-divider />
+
+      <v-list nav shaped class="pt-0">
+        <v-subheader class="text-uppercase">Main</v-subheader>
         <v-list-item
           v-for="(item, i) in links"
           :key="i"
@@ -24,17 +43,37 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+
+      <v-divider />
+
+      <v-list nav shaped class="pt-0">
+        <v-subheader class="text-uppercase">Others</v-subheader>
+        <v-list-item router exact to="/settings">
+          <v-list-item-action>
+            <v-icon>mdi-tools</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="'Settings'" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
-    <v-app-bar clipped-left app color="white">
+
+    <v-app-bar app dark flat color="black">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title
+        class="text-uppercase primary--text font-weight-black hidden-md-and-up"
+        v-text="title"
+      />
     </v-app-bar>
+
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
         <Snackbar />
       </v-container>
     </v-main>
+
     <v-footer app>
       <v-container fluid>
         <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -48,7 +87,7 @@
 export default {
   data() {
     return {
-      title: 'LekkyShops',
+      title: 'Lekkyshops',
       drawer: false,
     }
   },

@@ -1,32 +1,47 @@
 <template>
   <div>
-    <v-sheet color="grey lighten-5">
-      <v-row justify="center" align="center" class="fill-height">
-        <div class="font-weight-bold display-1 my-7">All Products</div>
-      </v-row>
-    </v-sheet>
-    <v-container fluid>
+    <v-container fluid class="tertiary">
       <v-breadcrumbs :items="breadcrumbs" />
     </v-container>
 
-    <v-container fluid class="pt-5 mx-lg-10">
+    <v-container>
       <v-row justify="center">
-        <v-col cols="12" lg="10">
-          <v-row>
+        <v-col cols="12">
+          <v-row class="d-none d-sm-flex">
             <v-col
               v-for="(product, v) in products.slice(0, 12)"
               :key="v"
-              cols="6"
+              cols="12"
+              sm="6"
               md="4"
               lg="3"
-              class="mb-8"
             >
-              <ProductCard :show-vendor="true" :product="product" />
+              <ProductCard :product="product" />
+            </v-col>
+            <v-col cols="12">
+              <div class="text-center">
+                <v-pagination :value="2" :total-visible="5" :length="10" />
+              </div>
             </v-col>
           </v-row>
-          <div class="text-center">
-            <v-pagination :value="2" :total-visible="5" :length="10" />
-          </div>
+          <!-- infinite scroll for mobile -->
+          <v-row justify="center" class="hidden-sm-and-up">
+            <v-col cols="11">
+              <v-virtual-scroll
+                :items="[...products, ...products, ...products]"
+                :bench="1"
+                height="1400"
+                item-height="350"
+              >
+                <template v-slot="{ item }">
+                  <div class="pb-3">
+                    <ProductCard :product="item" />
+                  </div>
+                  <v-divider />
+                </template>
+              </v-virtual-scroll>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>

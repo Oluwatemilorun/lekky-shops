@@ -1,18 +1,18 @@
 <template>
   <div class="menubar">
-    <v-app-bar height="50" class="hidden-sm-and-down" color="white" flat>
+    <v-app-bar height="40" color="white" flat class="hidden-sm-and-down">
       <v-tabs
-        color="primary"
+        color="black"
         optional
-        show-arrows
         grow
         hide-slider
         class="text-center"
+        :mobile-breakpoint="960"
       >
         <v-tab
           v-for="(category, y) in categories"
           :key="y"
-          class="text-capitalize subtitle-2 font-weight-thin pa-0 primary--text"
+          class="text-capitalize font-weight-thin pa-0 text--primary"
         >
           <v-menu
             bottom
@@ -23,7 +23,7 @@
             :min-width="category.subs.length > 0 ? 850 : 650"
           >
             <template v-slot:activator="{ on }">
-              <span class="subtitle-1 pa-3" v-on="on">
+              <span class="subtitle-2 pa-3" v-on="on">
                 {{ category.name }}
               </span>
             </template>
@@ -42,7 +42,7 @@
                 <v-col cols="3" class="text-right">
                   <v-btn
                     text
-                    color="primary"
+                    color="text--primary"
                     class="text-capitalize subtitle-1"
                     :to="`/categories/${category.slug}`"
                   >
@@ -159,9 +159,7 @@ export default {
 </script>
 <style scoped>
 .menubar {
-  margin-top: 70px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  margin-top: 60px;
 }
 .vendor-card .vendor-overlay {
   transition: all ease-in 0.3s;

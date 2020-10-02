@@ -1,27 +1,31 @@
 <template>
   <div>
-    <v-container fluid>
+    <v-container fluid class="tertiary text-capitalize">
       <v-breadcrumbs :items="breadcrumb" />
     </v-container>
 
     <v-container>
       <v-row>
         <v-col cols="12">
-          <v-row class="my-5">
+          <v-row>
             <v-col cols="12" md="6">
               <v-carousel
                 v-model="gallery"
                 hide-delimiters
                 hide-delimiter-background
                 :show-arrows="false"
+                height="400"
+                @click.stop="zoomDialog = true"
               >
                 <v-carousel-item v-for="(img, v) in prodImages" :key="v">
-                  <v-img :src="img" />
+                  <v-img :src="img" height="100%" />
                 </v-carousel-item>
               </v-carousel>
+
+              <!-- Image thumbnails -->
               <v-row>
                 <v-col cols="12">
-                  <v-slide-group>
+                  <v-slide-group show-arrows>
                     <v-slide-item
                       v-for="(pic, d) in prodImages"
                       :key="d"
@@ -121,7 +125,6 @@
                 >
                   Add to cart
                 </v-btn>
-                {{ tempcart }}
               </v-card>
             </v-col>
           </v-row>
@@ -213,7 +216,7 @@
                     </v-expand-transition>
 
                     <v-footer color="transparent" paddless>
-                      <v-spacer></v-spacer>
+                      <v-spacer />
                       <v-btn
                         text
                         color="primary"
@@ -276,7 +279,7 @@ export default {
       return [
         { text: 'Home', to: '/', disabled: false },
         { text: 'Vendors', to: '/vendors', disabled: false },
-        { text: 'Rare Collections', to: '/vendor', disabled: false },
+        { text: this.product.vendor, to: '/vendor/1', disabled: false },
         {
           text: this.product.name,
           to: '',
@@ -298,12 +301,12 @@ export default {
     addToCart() {
       const item = this.product
       item.quantity = this.quantity
-      this.tempcart.push(item)
       this.$store.commit('product/addToCart', item)
     },
     addReview() {
       this.reviews.push(this.review)
       this.review = {}
+      this.reviewBox = false
     },
   },
   head() {

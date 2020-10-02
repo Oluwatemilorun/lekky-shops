@@ -8,15 +8,12 @@
       height="225"
       class="category-card"
     >
-      <v-img
-        :src="category.cover ? category.cover : '/img/hair-dresser.jpeg'"
-        height="100%"
-      >
+      <v-img :src="category.cover && category.cover" height="100%">
         <v-sheet
           tile
           height="100%"
           width="100%"
-          :color="hover ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0.5)'"
+          :color="hover ? 'rgba(0,0,0,0.95)' : 'rgba(0,0,0,0.5)'"
           class="category-overlay"
         >
           <v-row

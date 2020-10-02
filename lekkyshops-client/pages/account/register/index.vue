@@ -87,7 +87,7 @@
 </template>
 
 <script>
-import { emailValidation } from '~/assets/js/validation'
+import { emailValidation } from '~/utils/validation'
 
 export default {
   layout: 'user-auth',

@@ -1,47 +1,41 @@
 <template>
   <div>
-    <!-- Search bar  toolbar -->
     <v-app-bar
-      id="search-bar"
-      v-model="searchBar"
-      absolute
-      color="white"
-      height="70"
-      flat
-    >
-      <v-btn icon class="mr-6 mr-md-12" @click="toggleSearch">
-        <v-icon color="primary"> mdi-arrow-left </v-icon>
-      </v-btn>
-      <v-text-field
-        placeholder="Search products, vendors and categories..."
-        solo
-        flat
-        clearable
-      />
-    </v-app-bar>
-
-    <!-- main toolbar -->
-    <v-app-bar
-      v-model="appBar"
       app
-      absolute
-      height="70"
+      :absolute="!isMobile"
+      height="60"
       flat
-      light
       color="white"
+      :hide-on-scroll="isMobile"
     >
-      <v-btn icon color="primary" @click="toggleDrawer">
+      <v-btn
+        icon
+        color="primary"
+        height="40"
+        width="40"
+        class="hidden-md-and-up"
+        @click.stop="mobDrawer = true"
+      >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title class="px-0 mx-0 font-weight-black headline">
-        LekkyShops
+
+      <v-toolbar-title
+        class="font-weight-bold px-0 ml-2"
+        style="cursor: pointer"
+        @click="$router.push('/')"
+      >
+        <v-icon large color="primary">mdi-shopping</v-icon>
+        <span class="d-none d-sm-inline">LekkyShops</span>
       </v-toolbar-title>
+
+      <v-spacer />
 
       <v-btn
         v-for="(link, l) in links"
         :key="l"
         text
-        class="hidden-sm-and-down subtitle-2"
+        small
+        class="hidden-sm-and-down mx-1"
         :to="link.href"
         exact
       >
@@ -50,83 +44,63 @@
 
       <v-spacer />
 
-      <v-btn icon class="mx-1" @click="toggleSearch">
-        <v-icon color="primary"> mdi-magnify </v-icon>
+      <v-btn
+        icon
+        class="mx-1"
+        height="40"
+        width="40"
+        @click.stop="search = true"
+      >
+        <v-icon color="black"> mdi-magnify </v-icon>
       </v-btn>
 
       <v-badge
+        :content="1"
+        :value="1"
+        offset-y="18"
+        offset-x="20"
+        overlap
+        color="accent"
+      >
+        <v-btn icon height="40" width="40" @click.stop="wishlist = true">
+          <v-icon color="black"> mdi-heart-outline </v-icon>
+        </v-btn>
+      </v-badge>
+
+      <v-badge
         :content="cartCount"
+        :value="cartCount"
         offset-y="18"
         offset-x="20"
         overlap
         bordered
+        color="accent"
       >
-        <v-btn icon @click="toggleCart">
-          <v-icon color="primary"> mdi-cart </v-icon>
+        <v-btn icon height="40" width="40" @click.stop="cartDrawer = true">
+          <v-icon color="black"> mdi-cart </v-icon>
         </v-btn>
       </v-badge>
 
       <UserMenu v-if="isLoggedIn" />
-
-      <div v-else>
-        <v-btn
-          text
-          color="secondary"
-          depressed
-          class="hidden-sm-and-down mx-3 error--text text-capitalize"
-          :to="`/account/login?redirect=${$router.history.current.fullPath}`"
-        >
-          Login
-        </v-btn>
-
-        <v-btn
-          color="accent"
-          depressed
-          class="hidden-sm-and-down text-capitalize"
-          :to="`/account/register?redirect=${$router.history.current.fullPath}`"
-        >
-          Sign Up
-        </v-btn>
-      </div>
+      <v-btn
+        v-else
+        icon
+        color="black"
+        height="40"
+        width="40"
+        :to="`/account/login?redirect=${$router.history.current.fullPath}`"
+      >
+        <v-icon>mdi-account-outline</v-icon>
+      </v-btn>
     </v-app-bar>
 
-    <!-- Mobile Drawer -->
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      color="white"
-      temporary
-      left
-      floating
-      width="320"
-    >
-      <v-list>
-        <v-subheader class="text-uppercase mt-3"> All Categories </v-subheader>
+    <!-- Drawers -->
+    <MobileDrawer v-model="mobDrawer" />
+    <CartItems v-model="cartDrawer" />
+    <WishList v-model="wishlist" />
 
-        <v-list-item
-          v-for="(item, i) in categories"
-          :key="i"
-          :to="`/categories/${item.slug}`"
-          style="border-bottom: 1px solid #ccc"
-        >
-          {{ item.text }}
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <!-- Shopping Cart Drawer-->
-    <v-navigation-drawer
-      v-model="cartDrawer"
-      app
-      light
-      temporary
-      right
-      width="400"
-      hide-overlay
-      floating
-    >
-      <CartItems />
-    </v-navigation-drawer>
+    <!-- Search dialog -->
+    <SearchDialog v-model="search" />
 
     <!-- Menubar -->
     <Menubar />
@@ -136,17 +110,14 @@
 <script>
 export default {
   data: () => ({
-    drawer: null,
-    cartDrawer: null,
-    searchBar: false,
-    appBar: true,
+    mobDrawer: false,
+    cartDrawer: false,
+    search: false,
+    wishlist: false,
   }),
   computed: {
     links() {
       return this.$store.state.links
-    },
-    categories() {
-      return this.$store.state.category.categories
     },
     isLoggedIn() {
       return this.$store.state.user.isSignedIn
@@ -154,17 +125,8 @@ export default {
     cartCount() {
       return this.$store.getters['product/cartCount']
     },
-  },
-  methods: {
-    toggleDrawer() {
-      this.drawer = !this.drawer
-    },
-    toggleCart() {
-      this.cartDrawer = !this.cartDrawer
-    },
-    toggleSearch() {
-      this.searchBar = !this.searchBar
-      this.appBar = !this.appBar
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
     },
   },
 }

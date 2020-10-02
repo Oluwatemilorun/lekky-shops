@@ -138,7 +138,7 @@
 
 <script>
 // import { mapGetters } from 'vuex';
-import { getInitials } from '~/assets/js/main.js'
+import getInitials from '~/utils/getInitials.js'
 
 /* eslint-disable no-unused-vars, no-undef */
 export default {

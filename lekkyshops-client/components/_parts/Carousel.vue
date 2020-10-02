@@ -9,13 +9,14 @@
       delimiter-icon="mdi-minus"
       :show-arrows="false"
       reverse
+      :interval="10000"
     >
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet color="grey lighten-3">
           <v-img :src="slide" height="400">
             <v-row justify="center" align="center" class="fill-height">
               <v-col cols="10" class="white--text">
-                <div class="text-uppercase display-2 font-weight-black">
+                <div class="text-uppercase display-1 font-weight-black">
                   Buy Wholesale
                 </div>
                 <div class="headline font-weight-bold my-2">
@@ -42,7 +43,6 @@ export default {
   data() {
     return {
       slides: [
-        '/img/slide-dress.jpg',
         '/img/slide-shoes.jpg',
         '/img/shopping.jpg',
         '/img/clothing.jpg',

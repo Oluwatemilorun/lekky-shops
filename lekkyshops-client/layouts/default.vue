@@ -3,7 +3,7 @@
     <Header />
 
     <!-- Content -->
-    <main>
+    <main class="v-content">
       <nuxt />
       <Snackbar />
     </main>

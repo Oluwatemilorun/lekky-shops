@@ -10,20 +10,20 @@
         </v-row>
       </v-img>
     </v-sheet>
-    <v-sheet color="white" tile elevation="2">
+    <v-sheet color="white" tile elevation="4">
       <v-container fluid>
         <v-row justify="center">
-          <v-col lg="11">
+          <v-col cols="12" lg="11">
             <v-row>
-              <v-col cols="2" class="pt-0">
+              <v-col cols="4" sm="2" lg="2" class="pt-0">
                 <div style="margin-top: -75px">
-                  <v-avatar size="180" style="border: 5px solid white">
+                  <v-avatar size="145" style="border: 5px solid white">
                     <v-img src="/img/bracelet.jpg" />
                   </v-avatar>
                 </div>
               </v-col>
-              <v-col cols="4" class="pt-0">
-                <div class="headline font-weight-bold pb-2 ml-3">
+              <v-col cols="8" lg="4" class="py-0">
+                <div class="title font-weight-bold pb-2 ml-10 ml-lg-3">
                   Rare Collections
                 </div>
                 <v-rating
@@ -31,30 +31,32 @@
                   color="primary"
                   background-color="primary"
                   dense
-                  size="24"
+                  size="20"
                   half-increments
-                  class="ml-3"
+                  class="ml-10 ml-lg-3"
                 />
-                <v-btn
-                  v-for="(social, a) in socials"
-                  :key="a"
-                  text
-                  large
-                  color="primary"
-                  class="mr-2 text-capitalize subtitle-1"
-                >
-                  <v-icon left :color="social.color">
-                    mdi-{{ social.name }}
-                  </v-icon>
-                  {{ social.name }}
-                </v-btn>
+                <div class="ml-10 ml-lg-3">
+                  <v-btn
+                    v-for="(social, a) in socials"
+                    :key="a"
+                    :text="!isMobile"
+                    :icon="isMobile"
+                    large
+                    color="primary"
+                    class="mr-2 text-capitalize subtitle-1"
+                  >
+                    <v-icon left :color="social.color">
+                      mdi-{{ social.name }}
+                    </v-icon>
+                    <span class="hidden-sm-and-down">{{ social.name }}</span>
+                  </v-btn>
+                </div>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="12" lg="6" class="px-5 pt-0">
                 <div class="subtitle-1">
                   Some description about your store goes here so your visitors
                   can know what offers you've got in stock for them.Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt.
+                  dolor sit amet.
                 </div>
               </v-col>
             </v-row>
@@ -63,9 +65,9 @@
       </v-container>
     </v-sheet>
 
-    <v-container fluid class="pt-5">
+    <v-container class="pt-5">
       <v-row justify="center">
-        <v-col cols="12" lg="10">
+        <v-col cols="12">
           <v-tabs grow class="primary">
             <v-tab
               v-for="i in ['Home', 'All Items (82)', 'Reviews (26)', 'About']"
@@ -189,6 +191,9 @@ export default {
   computed: {
     products() {
       return this.$store.state.product.products
+    },
+    isMobile() {
+      return this.$vuetify.breakpoint.smAndDown
     },
   },
 }

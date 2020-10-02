@@ -9,7 +9,7 @@
           <h1 v-else>
             {{ otherError }}
           </h1>
-          <v-btn color="primary" x-large class="my-10" to="/">
+          <v-btn color="primary" large depressed class="my-10" to="/">
             Back to Homepage
           </v-btn>
         </v-col>
