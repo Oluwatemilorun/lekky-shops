@@ -5,10 +5,14 @@ const theme = {
   dark: false,
   themes: {
     light: {
-      primary: colors.grey.darken3,
-      secondary: '#f9f8f3',
-      accent: colors.deepOrange.accent4,
-      tertiary: colors.teal.darken1,
+      primary: '#191414',
+      secondary: '#FFFFFF',
+      accent: '#1DB954',
+      tertiary: colors.grey.lighten5,
+      info: colors.teal.lighten1,
+      warning: colors.amber.base,
+      error: colors.deepOrange.accent4,
+      success: colors.green.accent3,
     },
   },
 }
