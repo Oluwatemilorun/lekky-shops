@@ -1,32 +1,9 @@
 <template>
   <div>
-    <v-sheet flat tile height="175" color="primary lighten-2">
-      <v-img :src="category.cover" height="100%" class="cover">
-        <v-row
-          justify="center"
-          align="end"
-          class="fill-height white--text overlay"
-        >
-          <v-col cols="11">
-            <div class="headline font-weight-bold text-capitalize">
-              {{ category.name }}
-            </div>
-            <v-breadcrumbs :items="breadcrumbs" dark class="px-0 py-2">
-              <template v-slot:item="{ item }">
-                <v-chip
-                  class="text-capitalize"
-                  :to="item.to"
-                  :disabled="item.disabled"
-                  depressed
-                >
-                  {{ item.text }}
-                </v-chip>
-              </template>
-            </v-breadcrumbs>
-          </v-col>
-        </v-row>
-      </v-img>
-    </v-sheet>
+    <v-container fluid class="tertiary text-capitalize">
+      <v-breadcrumbs :items="breadcrumbs" />
+    </v-container>
+
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -113,7 +90,7 @@ export default {
     breadcrumbs() {
       return [
         { text: 'home', to: '/' },
-        { text: 'categories', to: '/categories' },
+        { text: 'categories', to: '/categories', exact: true },
         {
           text: this.category.name,
           to: `/categories/${this.category.slug}`,
