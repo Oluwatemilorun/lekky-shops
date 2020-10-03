@@ -15,7 +15,6 @@
                 hide-delimiter-background
                 :show-arrows="false"
                 height="400"
-                @click.stop="zoomDialog = true"
               >
                 <v-carousel-item v-for="(img, v) in prodImages" :key="v">
                   <v-img :src="img" height="100%" />

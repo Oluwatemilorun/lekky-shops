@@ -43,7 +43,7 @@
     </v-list>
     <v-list dense>
       <v-subheader class="text-uppercase"> More Links </v-subheader>
-      <v-list-item v-for="link in links" :key="link.text" :to="link.href">
+      <v-list-item v-for="link in links" :key="link.text" :to="link.href" exact>
         <v-list-item-title class="subtitle-2 text-capitalize">
           {{ link.text }}
         </v-list-item-title>
